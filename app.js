@@ -3,7 +3,7 @@ const express = require('express');
 
 const Tenor = require("tenorjs").client({
   // Replace with your own key
-  "Key": "LH1KPRWMQBMY", // https://tenor.com/developer/keyregistration
+  "Key": "POZVKUNLM6GC", // https://tenor.com/developer/keyregistration
   "Filter": "high", // "off", "low", "medium", "high", not case sensitive
   "Locale": "en_US", // Your locale here, case-sensitivity depends on input
 });
@@ -55,9 +55,3 @@ app.listen(3000, () => {
   console.log('Gif Search listening on port localhost:3000!');
 });
 
-// example URL "http://localhost:3000/?term=hey"
-app.get('/', (req, res) => {
-  console.log(req.query) // => "{ term: hey" }
-
-  res.render('home')
-})
